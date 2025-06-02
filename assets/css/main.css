@@ -1,0 +1,535 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../images/patron-linea-cuadricula-fondo-textura-azul_1409-1354.avif);
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 100px; /* Ajusta para evitar que el contenido quede oculto debajo del header */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Capa negra semitransparente */
+    z-index: -1; /* Para que no afecte el contenido */
+}
+header {
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Lo posiciona en la parte superior */
+    left: 0; /* Lo alinea a la izquierda */
+    width: 100%; /* Ocupa todo el ancho */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 6px 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+.container-pros{
+    margin: 20px  auto;
+    text-align: center;
+}
+.container-pros h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+}
+.logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo img {
+    height: 45px;
+    width: 45px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+nav ul li a:hover {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    padding: 8px 16px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login {
+    background: #e9e9e9;
+    color: #333;
+}
+
+.login:hover {
+    background: #d0d0d0;
+}
+
+/*Boton de registro*/
+
+.signup {
+    width: 100%;
+    padding: 8px 16px;
+    background: #e60023;
+    color: white;
+    padding: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 2rem;
+    
+}
+
+.signup:hover {
+    background: #b8001b;
+}
+
+
+
+.container {
+    margin: 20px auto;
+    background-color: rgba(255, 255,255,.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.presicion{
+    width: 60px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#div-de-botones{
+    width: 50%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 1px;
+    padding: 10px;
+}
+
+#div-de-botones button {
+    padding: 5px;
+    margin: 2px 3px;
+    border: none;
+}
+
+ #process-data-btn{
+    width: 300px;
+    margin: auto;
+   font-size: 18px;
+   padding: 0px;
+}
+/* Botón de Descargar Excel */
+.btn-descargar-excel,.btn-descargar-grafico,.btn-descargar-tabla {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-descargar-excel:hover, .btn-descargar-grafico:hover , .btn-descargar-tabla:hover {
+    background-color:#1976D2;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/*Estilos de la tabla de frecuencias*/
+#results, #graficos {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+#results table, #graficos table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#results th, #results td, #graficos th, #graficos td  {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+#results th, #graficos th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#results tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#results tr:hover{
+    background-color: #C8F1CC;
+}
+
+
+/*tamaño del grafico*/
+#frequency-chart {
+    margin-top: 30px;
+    width: 30%;
+    height: 400px;
+}
+
+
+/* Estilos para la tabla de estadísticas */
+
+#stats-results, #cuartiles-result,#asimetria-result{
+    margin: 20px auto;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    width: 60%;
+}
+#stats-results h3, #cuartiles-result h3,#asimetria-result h3 {
+    border-top-left-radius: 10px;  /* Esquina superior izquierda */
+    border-top-right-radius: 10px; /* Esquina superior derecha */
+    background-color: #4CAF50 ;
+    padding: 6px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0px;
+    color: #ffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#stats-results table , #cuartiles-result table, #asimetria-result table{
+    border-radius: 12px;
+    margin: 0px auto;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    background: white;
+}
+
+#stats-results th, #stats-results td, #cuartiles-result th, #cuartiles-result td, #asimetria-result th, #asimetria-result td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+#stats-results th, #cuartiles-result th, #asimetria-result th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+#stats-results tr:nth-child(even), #cuartiles-result tr:nth-child(even), #asimetria-result tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#stats-results tr:hover, #cuartiles-result tr:hover, #asimetria-result tr:hover {
+    background-color: #C8F1CC;
+}
+
+#stats-results td:first-child, #cuartiles-result td:first-child, #asimetria-result td:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Efecto de sombra y bordes suaves */
+#stats-results table, #cuartiles-result table, #asimetria-result table{
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+#div-presicion{
+    display: none;
+}
+
+#div-presicion input {
+    width: 50px;
+    padding: 7px;
+    font-size: 14px;
+}
+
+
+@media (max-width: 800px) {
+
+    
+    
+#div-de-botones{
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#process-data-btn{
+    width: 90%;
+}
+
+.btn-descargar-excel,.btn-descargar-grafico,.btn-descargar-tabla {
+    width: 90%;
+}
+
+.btn-descargar-excel:hover, .btn-descargar-grafico:hover , .btn-descargar-tabla:hover {
+    width: 90%;
+}
+    header {
+    font-size: 1.25rem; /* 20px */
+    padding: 8px 20px;
+        
+    }
+    .container {
+        width: 95%;
+        padding: 16px;
+        margin: clamp(20px, 5vw, 50px) auto;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 1.5px;
+    }
+
+    .logo img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .logo p {
+        font-size: 1rem;
+        margin-top: 0;
+        margin-left: 2px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px;
+        background: none;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        z-index: 1001;
+    }
+
+    .signup {
+        margin-left: 2rem;
+        font-size: 1rem;
+        background: #e60023;
+        color: white;
+        padding: 10px;
+    }
+    
+    .signup:hover {
+        background: #b8001b;
+    }
+    
+    
+
+    .menu-toggle i {
+        color: #333;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 8px;
+    }
+
+    button {
+        width: 90%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .procesar {
+        max-width: 90%;
+        padding: 15px;
+    }
+    label {
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+    }
+    input {
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #stats-results {
+        width: 95%;
+    }
+
+    #stats-results h3 {
+        font-size: 18px;
+    }
+
+    #stats-results table {
+        font-size: 14px;
+    }
+}
+
+ /* Estilos para el contenedor de carga */
+ #loading-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    display: none; /* Oculto por defecto */
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+}
+
+
+/* GIF de carga o animación con CSS */
+.spinner {
+    width: 100px;
+    height: 100px;
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

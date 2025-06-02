@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+  rel="stylesheet"
+/>
+    <title>Statix</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="company-logo" src="./assets/icons/Logo.png" alt="Logo_empresa">
+            <p class="software-name">tatix</p>
+        </div>
+     
+
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" id="nav-registrate" class="nav-link">Regístrate</a>
+                    <a href="#" id="nav-login"     class="nav-link">Iniciar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="input">
+        <h1 id="first-tittle">Datos de Entrada</h1>
+
+        <div class="item" id="fist-input">
+            <label for="">Selecciona tu archivo: </label>
+            <input id="fileInput" type="file" accept=".xlsx,.xls,.csv" />
+            <button type="btnClear" id="btnClear" title="Limpiar archivo">✕</button>
+        </div>
+
+        <div class="item" id="columnas">
+            <label for="columnas">Columnas:</label>
+            <select class="seleccionar" name="options-columna" id="options-columna">
+
+            </select>
+        </div>
+
+        <div class="item" id="container-type-variable">
+            <label for="type-variable">Tipo de variable:</label>
+                <select class="seleccionar" name="type" id="type-variable">
+                    <option value="cuantitativa-discreta">Cuantitativa Discreta</option>
+                    <option value="cuantitativa-continua">Cuantitativa Continua</option>
+                </select>
+        </div>
+
+        <div class="item" id="div-presicion">
+            <label for="presicion">Presicion:</label>
+            <input class="presicion" type="number" id="presicion" min="0" max="10" value="0">
+        </div>
+
+        <div  id="div-btn-procesar">
+            <button id="proccess-data-btn">Procesar Datos</button>
+            <div id="btn-descarga"></div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
