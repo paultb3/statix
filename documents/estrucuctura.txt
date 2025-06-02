@@ -1,0 +1,28 @@
+/app
+│
+├─ /assets
+│   ├─ /css
+│   └─ /images
+│
+├─ /models
+│   ├─ DataProcessor.js         # Lógica de limpieza, agrupado y cálculo de tablas
+│   ├─ StatsModel.js            # Cálculo de media, mediana, moda, desviación
+│   └─ AsymmetryModel.js        # Cálculo de asimetría (Fisher, Bowley…)
+│
+├─ /views
+│   ├─ ChartView.js             # Dibuja y actualiza el gráfico
+│   ├─ ResultsView.js           # Muestra resultados (tablas, estadísticas)
+│   ├─ ButtonsView.js           # Renderiza y controla botones de UI
+│   └─ templates/                # Si usas fragmentos HTML (p.ej. Mustache, lit-html…)
+│
+├─ /controllers
+│   ├─ MainController.js        # Punto de entrada: coordina Models ↔ Views
+│   ├─ ExcelController.js       # Manejo de subida/descarga de Excel
+│   └─ ThreadController.js      # Orquesta el procesamiento en hilos (Web Workers)
+│
+├─ /utils
+│   ├─ precision.js             # Funciones de redondeo, formateo
+│   └─ threadUtils.js           # Helpers para Web Workers, chunking de datos
+│
+├─ index.html                   # Vista raíz, carga MainController
+└─ README.md
