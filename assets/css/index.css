@@ -128,14 +128,13 @@ header {
     width: 96.5%;
     height: 100vh;
     margin: 0rem auto;
-
     background-color: #e0f7fa;
     border-radius: 8px;
     padding: 0.5rem;
 
 }
 #input > .item {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
@@ -166,6 +165,7 @@ header {
     align-items: center;
 }
 
+
 #proccess-data-btn{
   background-color: #4CAF50;
   font-size: 18px;
@@ -185,9 +185,8 @@ label{
 }
 
 #btnClear {
-  margin: auto;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   background: #e74c3c;
   border: none;
   color: #fff;
@@ -195,7 +194,13 @@ label{
   padding: 0.1rem 0.5rem;
   border-radius: 0.25rem;
   cursor: pointer;
-  display: none;
+  margin-left: -0.4rem;
+  margin-right: -1.4rem;
+
+}
+#btnClear:hover{
+  background-color: #b8001b;
+  color: white;
 }
 
 input{
@@ -215,6 +220,45 @@ input{
   padding: 10px;
   border: none;
   font-size: 14px;
-  text-align: center;
+ 
+  
+}
 
+ /* Estilos para el contenedor de carga */
+ #loading-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    display: none; /* Oculto por defecto */
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* GIF de carga o animación con CSS */
+.spinner {
+    width: 100px;
+    height: 100px;
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

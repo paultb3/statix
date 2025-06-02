@@ -32,10 +32,10 @@
     <div id="input">
         <h1 id="first-tittle">Datos de Entrada</h1>
 
-        <div class="item" id="fist-input">
+        <div class="item" id="first-input">
             <label for="">Selecciona tu archivo: </label>
             <input id="fileInput" type="file" accept=".xlsx,.xls,.csv" />
-            <button type="btnClear" id="btnClear" title="Limpiar archivo">✕</button>
+            <button type="btnClear" id="btnClear" style="display: none;" title="Limpiar archivo">✕</button>
         </div>
 
         <div class="item" id="columnas">
@@ -62,6 +62,11 @@
             <button id="proccess-data-btn">Procesar Datos</button>
             <div id="btn-descarga"></div>
         </div>
+
+        <div style="display: none;" id="loading-overlay">
+            <div class="spinner"></div>
+            <p id="loading-text"></p>
+       </div>
 
     </div>
     
